@@ -22,7 +22,8 @@ img{
 
 .container{
     width: 1158px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    padding: auto;
 }
 
 .header-container{
