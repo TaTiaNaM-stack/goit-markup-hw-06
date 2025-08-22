@@ -53,7 +53,7 @@ img{
     width: 320px;
     margin: 0 auto; 
     padding: 0 16px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 @media screen and (min-width: 768px){
@@ -74,6 +74,7 @@ img{
  .header-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 } 
 
 
@@ -530,7 +531,7 @@ margin-bottom: 16px;
     margin-top: 72px;
     margin-right: 0;
     margin-bottom: 24px;
-    margin-left: 80px;
+    margin-left: 0px;
     justify-content: center;
     
 }
@@ -542,6 +543,11 @@ margin-bottom: 16px;
     letter-spacing: 0.02em;
     color: #fff;
     font-size: 16px;
+    text-align: center;
+}
+
+.form-footer{
+    justify-content: center;
 }
 
 .label-down-form{
@@ -567,6 +573,10 @@ margin-bottom: 16px;
 
 .form-input::placeholder{
     color: #fff;
+}
+
+.down-button{
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 768px){
@@ -736,6 +746,42 @@ column-gap: 24px;
  max-width: 420px;
 }
 
+/*footer*/
+
+.down{
+    padding: 96px 108px;
+}
+
+.down-blok{
+    display: flex;
+     width: calc((100% - 48px) / 2);
+}
+
+.social-media{
+    text-align: left;
+}
+
+.form-field{
+    display: flex;
+    margin: 0;
+
+    justify-content: left;
+}
+
+.form-paragraph{
+    text-align: start;
+}
+
+.form-footer{
+    display: flex;
+    margin-top: 16px;
+    gap: 24px;
+}
+
+.form-input{
+    margin: 0;
+}
+
 }
 
 
@@ -791,10 +837,31 @@ align-items: center;
 justify-content: center;
 }
 
+/*section-3 team*/
+
+.team{
+    padding: 120px 0;
+}
+
 /*section-4 portfolio*/
 
 .actives{
     width: calc((100% - 48px) / 3);
+}
+
+/*footer*/
+
+.down-container{
+    display: flex;
+    gap: 80px;
+}
+
+.downtxt{
+    margin: 0;
+}
+
+.down-contact{
+    margin-left: 120px;
 }
 
 }
