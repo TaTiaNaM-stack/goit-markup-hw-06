@@ -54,6 +54,7 @@ img{
     margin: 0 auto; 
     padding: 0 16px;
     justify-content: center;
+    margin-left: auto;
 }
 
 @media screen and (min-width: 768px){
@@ -1100,7 +1101,7 @@ column-gap: 24px;
 
 .big-title{
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-baner.jpg);;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-baner.jpg);
 }
 
 /*section-2 about*/
