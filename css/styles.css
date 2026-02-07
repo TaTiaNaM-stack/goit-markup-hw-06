@@ -1,5 +1,5 @@
-.hidden{
-    display: none;
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -120,8 +120,12 @@ img{
     display: none;
 }
 
+/* .mobile-menu{
+    display: none;
+} */
+
 .burger-btn{
-    padding: 0;
+    padding: 10px;
     border: none;
     background-color: transparent;
 }
@@ -337,6 +341,7 @@ p{
 
 .section-portfolio{
     padding: 96px 0;
+    z-index: -1;
 }
 
 .title-portfolio{
@@ -378,7 +383,7 @@ p{
 }
 
 .actives:hover .txt-change{
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 
 .description-foto{
@@ -498,8 +503,6 @@ margin-bottom: 16px;
 .down-link:hover, .down-link:focus{
     background-color: #31d0aa;
 }
-
-
 .icon-down{
     fill: #f4f4fd; 
 }
@@ -1328,12 +1331,18 @@ color: #434455;
 }
 
 @media screen and (min-width: 768px){
-    .mobile-menu{
-    display: none;
-}
-
 
 }
+/* .mobile-menu.is-open{
+    opacity: 1;
+    pointer-events: all;
+    background-color: #fff;
+    z-index: 1000;
+} */
+
+/* .is-open{
+    display: block;
+} */
 
 
 

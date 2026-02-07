@@ -46,6 +46,10 @@ text-transform: uppercase;
 color: #4d5ae5;
 } */
 
+html{
+    scroll-behavior: smooth;
+}
+
 .main-menu.current{
     position: relative;
 }
