@@ -126,6 +126,35 @@ function closeContacts() {
     popupBtn.style.transition = 'opacity 0.3s ease';
 }
 
+const formSubscribe = document.querySelector('.form-footer');
+formSubscribe.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for subscribing!');
+    formSubscribe.reset();
+});
+
+const inputSubscribe = document.querySelector('.form-input');
+const formData = {
+    email: '',
+};
+function onSubscribeChange(event) {
+    
+    formData[event.target.name] = event.target.value.trim();
+    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+};
+function onSubscribeSubmit(event) {
+    event.preventDefault();
+     if (formData.email === ''){
+         alert('Fill please all fields');
+        return false;
+    }
+    
+    console.log(formData);
+    event.currentTarget.reset();
+    localStorage.removeItem('feedback-form-state'); 
+    formData.email = '';
+}
+
 
 // if (savedFormData) {
 //     const parsedFormData = JSON.parse(savedFormData);   
