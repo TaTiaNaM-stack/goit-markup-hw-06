@@ -155,6 +155,17 @@ function onSubscribeSubmit(event) {
     formData.email = '';
 }
 
+formSubscribe.addEventListener('input', onSubscribeChange);
+formSubscribe.addEventListener('submit', onSubscribeSubmit);
+
+const savedSubscribeData = localStorage.getItem('feedback-form-state');
+if (savedSubscribeData) {
+    const parsedSubscribeData = JSON.parse(savedSubscribeData);   
+    formData.email = parsedSubscribeData.email || '';
+    inputSubscribe.value = formData.email;
+    
+};
+
 
 // if (savedFormData) {
 //     const parsedFormData = JSON.parse(savedFormData);   
