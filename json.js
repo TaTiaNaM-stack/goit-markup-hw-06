@@ -34,16 +34,14 @@ portfolioMobMenu.addEventListener('click', () => {
     closeMobileMenu();
 });
 
+const pcPortfolio = document.querySelector('.portfolio_js');
+
 const contactPopup = document.getElementById('contact');
 const mobContact = document.getElementById('mob_contact');
 const pcContact = document.querySelector('.contact_js');
 
 mobContact.addEventListener('click', () => {
     closeMobileMenu();
-    visibleContactPopup();
-});
-
-pcContact.addEventListener('click', () => {
     visibleContactPopup();
 });
 
@@ -54,6 +52,10 @@ function visibleContactPopup() {
     contactPopup.style.zIndex = '20';
     contactPopup.style.transition = 'opacity 0.3s ease';
 }
+
+pcContact.addEventListener('click', () => {
+    visibleContactPopup();
+});
 
 const btnClosePopup = document.querySelector('.popup-x');
 
@@ -115,6 +117,10 @@ function onFormSubmit(event) {
 formEl.addEventListener('input', onInputChange);
 formEl.addEventListener('submit', onFormSubmit);
 
+function closePopup(){
+    contactPopup.style.display = 'none';
+}
+
 const popupBtn = document.querySelector('.popup-button');
 
 function closeContacts() {
@@ -134,25 +140,25 @@ formSubscribe.addEventListener('submit', (e) => {
 });
 
 const inputSubscribe = document.querySelector('.form-input');
-const formData = {
-    email: '',
+const formDataEmail = {
+    emailSubscribe: '',
 };
 function onSubscribeChange(event) {
     
-    formData[event.target.name] = event.target.value.trim();
-    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+    formDataEmail[event.target.name] = event.target.value.trim();
+    localStorage.setItem('feedback-form-state', JSON.stringify(formDataEmail));
 };
 function onSubscribeSubmit(event) {
     event.preventDefault();
-     if (formData.email === ''){
+     if (formDataEmail.emailSubscribe === ''){
          alert('Fill please all fields');
         return false;
     }
     
-    console.log(formData);
+    console.log(formDataEmail);
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state'); 
-    formData.email = '';
+    formDataEmail.emailSubscribe = '';
 }
 
 formSubscribe.addEventListener('input', onSubscribeChange);
@@ -161,9 +167,9 @@ formSubscribe.addEventListener('submit', onSubscribeSubmit);
 const savedSubscribeData = localStorage.getItem('feedback-form-state');
 if (savedSubscribeData) {
     const parsedSubscribeData = JSON.parse(savedSubscribeData);   
-    formData.email = parsedSubscribeData.email || '';
-    inputSubscribe.value = formData.email;
-    
+    formDataEmail.emailSubscribe = parsedSubscribeData.emailSubscribe || '';
+    inputSubscribe.value = formDataEmail.emailSubscribe;
+    formSubscribe.reset()
 };
 
 
